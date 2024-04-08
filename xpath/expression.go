@@ -1,6 +1,7 @@
 package xpath
 
 /*
+#include <stdlib.h>
 #include <libxml/xpath.h>
 #include <libxml/xpathInternals.h>
 #include <string.h>
@@ -31,11 +32,14 @@ char *check_xpath_syntax(const char *xpath) {
 }
 */
 import "C"
-import "unsafe"
-import . "github.com/jbowtie/gokogiri/util"
+import (
+	"errors"
+	"unsafe"
+
+	. "github.com/matislovas/gokogiri/util"
+)
 
 //import "runtime"
-import "errors"
 
 type Expression struct {
 	Ptr   *C.xmlXPathCompExpr

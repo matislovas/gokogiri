@@ -25,7 +25,9 @@ To run test:
 - go test github.com/jbowtie/gokogiri/html
 - go test github.com/jbowtie/gokogiri/xml
 
-Basic example:
+```bash
+go test github.com/matislovas/gokogiri/...
+```
 
     package main
 
